@@ -33,4 +33,8 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 -->
 
+AI isn’t just transforming technology—it’s redefining intelligence itself.
 
+I’m deeply passionate about AI/ML, and Robotics, where algorithms don’t just process data but learn, adapt, and make intelligent decisions. My focus lies in robotic perception, manipulation, and control, exploring how AI enables machines to see, understand, and interact with the world in human-like ways. From deep learning for vision and grasping to reinforcement learning for autonomous decision-making, I’m fascinated by how intelligent systems evolve and improve over time.
+
+Beyond robotics, I leverage computational mechanics and Finite Element Methods (FEM) to enhance AI-driven engineering, ensuring that intelligent systems are not only smart but also structurally efficient. My expertise spans ROS, trajectory planning, deep learning frameworks (TensorFlow, PyTorch), and physics-based simulations, bridging the gap between AI theory and real-world applications.
