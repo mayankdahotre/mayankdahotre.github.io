@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Mechanical Undergradute</a>, IIT Gandhinagar. Competitive Programmer
+subtitle: <a href='#'>Mechanical Undergraduate</a>, IIT Gandhinagar. Competitive Programmer
 profile:
   align: right
   image: prof_pic.jpg
