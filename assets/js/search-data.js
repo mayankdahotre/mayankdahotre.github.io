@@ -460,13 +460,6 @@ ninja.data = [{
           window.open("https://github.com/mayankdahotre", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
         id: 'social-instagram',
         title: 'Instagram',
         section: 'Socials',
