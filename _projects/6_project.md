@@ -1,8 +1,8 @@
 ---
 layout: page
 title: project 6
-description: a project with no image
-img:
+description: dragoon
+img: assets/img/dragoon.jpg
 importance: 4
 category: fun
 ---
