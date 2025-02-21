@@ -5,7 +5,6 @@ repo_description_lines_max: 2
 
 github_repos:
   - mayankdahotre/ME-322-SAM 
-  - mayankdahotre/Building-Humanoids
   - mayankdahotre/ML-implementations
   - mayankdahotre/LeapHand-GraspObject
   - mayankdahotre/Open-Manipulator-LLM
