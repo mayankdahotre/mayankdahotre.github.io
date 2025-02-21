@@ -1,14 +1,14 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mayankdahotre
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - mayankdahotre/ME-322-SAM 
+  - mayankdahotre/Building-Humanoids
+  - mayankdahotre/ML-implementations
+  - mayankdahotre/LeapHand-GraspObject
+  - mayankdahotre/Open-Manipulator-LLM
+  - mayankdahotre/Leap-Hand-Robotics
+  - mayankdahotre/Hand-Gesture-Recognition-Model
+
