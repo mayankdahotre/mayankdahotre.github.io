@@ -481,13 +481,6 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/mayank-dahotre-a4671223b/", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
         id: 'social-x',
         title: 'X',
         section: 'Socials',
