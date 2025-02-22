@@ -467,6 +467,13 @@ ninja.data = [{
           window.open("https://instagram.com/mayank_dahotre", "_blank");
         },
       },{
+        id: 'social-leetcode',
+        title: 'LeetCode',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://leetcode.com/u/mayank_dahotre/", "_blank");
+        },
+      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
