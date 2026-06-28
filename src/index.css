@@ -119,6 +119,6 @@ body {
 }
 
 body[data-theme="luxury"] {
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: var(--color-luxury-dark);
+  color: #f5f5f5;
 }

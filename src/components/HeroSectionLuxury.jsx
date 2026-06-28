@@ -24,12 +24,12 @@ export default function HeroSectionLuxury({
   ];
 
   return (
-    <section className="relative flex min-h-screen flex-col bg-white">
+    <section className="relative flex min-h-screen flex-col bg-luxury-dark">
       <nav className="flex w-full items-center justify-between px-6 py-6 sm:px-12 sm:py-8">
         <span className="text-sm font-normal tracking-wide text-luxury-gold sm:text-base">
           Mayank Dahotre
         </span>
-        <ul className="flex gap-5 text-sm text-luxury-ink sm:gap-8">
+        <ul className="flex gap-5 text-sm text-luxury-gold-light/80 sm:gap-8">
           {navLinks.map(({ label, ref, href, download }) => (
             <li key={label}>
               {href ? (
@@ -55,7 +55,7 @@ export default function HeroSectionLuxury({
       </nav>
 
       <div className="flex flex-1 items-center justify-center px-6 pb-16 sm:px-12">
-        <div className="relative w-full max-w-4xl overflow-hidden rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.12)] aspect-[4/3]">
+        <div className="relative w-full max-w-4xl overflow-hidden rounded-sm luxury-glow shadow-[0_8px_40px_rgba(201,162,39,0.15)] aspect-[4/3]">
           <img
             src={heroGold}
             alt="Mayank Dahotre"

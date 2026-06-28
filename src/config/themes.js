@@ -28,30 +28,30 @@ export const themes = {
   luxury: {
     id: "luxury",
     label: "Gold",
-    pageBg: "bg-white",
+    pageBg: "bg-luxury-dark",
     heading: "luxury-gradient-text",
     accent: "text-luxury-gold",
-    accentHover: "hover:text-luxury-gold",
-    subheading: "text-luxury-gold-dark",
-    body: "text-neutral-700",
-    muted: "text-neutral-500",
+    accentHover: "hover:text-luxury-gold-light",
+    subheading: "text-luxury-gold",
+    body: "text-white/75",
+    muted: "text-white/55",
     skillTag:
-      "rounded-sm border border-luxury-gold/30 bg-neutral-50 px-4 py-2 text-sm text-luxury-gold-dark transition-colors hover:border-luxury-gold/50 hover:bg-luxury-gold/5",
+      "rounded-sm border border-luxury-gold/25 bg-luxury-charcoal px-4 py-2 text-sm text-luxury-gold-light transition-colors hover:border-luxury-gold/50 hover:bg-luxury-gold/10",
     projectCard:
-      "group flex flex-col rounded-sm border border-neutral-200 bg-neutral-50 p-6 shadow-sm transition-all hover:border-luxury-gold/40 hover:shadow-md",
+      "group flex flex-col rounded-sm border border-luxury-gold/15 bg-luxury-charcoal p-6 transition-all hover:border-luxury-gold/40 hover:luxury-glow",
     projectTitle:
-      "font-[family-name:var(--font-display)] text-2xl tracking-wide text-luxury-gold-dark",
+      "font-[family-name:var(--font-display)] text-2xl tracking-wide text-luxury-gold",
     projectTag:
-      "rounded-sm bg-luxury-gold/10 px-2 py-1 text-xs text-luxury-gold-dark",
-    projectLink: "text-luxury-gold-dark transition-colors hover:text-luxury-gold",
+      "rounded-sm bg-luxury-gold/10 px-2 py-1 text-xs text-luxury-gold-light",
+    projectLink: "text-luxury-gold transition-colors hover:text-luxury-gold-light",
     socialBtn:
-      "flex h-14 w-14 items-center justify-center rounded-sm border border-neutral-200 bg-neutral-50 text-luxury-gold-dark transition-all hover:border-luxury-gold/50 hover:text-luxury-gold",
+      "flex h-14 w-14 items-center justify-center rounded-sm border border-luxury-gold/20 bg-luxury-charcoal text-luxury-gold-light transition-all hover:border-luxury-gold/50 hover:text-luxury-gold hover:luxury-glow",
     primaryBtn:
       "luxury-gradient inline-block rounded-sm px-10 py-4 font-[family-name:var(--font-display)] text-xl tracking-wider text-black transition-transform hover:scale-105",
     secondaryBtn:
-      "inline-block rounded-sm border border-luxury-gold/50 px-10 py-4 font-[family-name:var(--font-display)] text-xl tracking-wider text-luxury-gold-dark transition-all hover:border-luxury-gold hover:bg-luxury-gold/5 hover:scale-105",
+      "inline-block rounded-sm border border-luxury-gold/50 px-10 py-4 font-[family-name:var(--font-display)] text-xl tracking-wider text-luxury-gold transition-all hover:border-luxury-gold hover:bg-luxury-gold/10 hover:scale-105",
     sectionOverlay: "opacity-0",
-    footer: "border-neutral-200 text-neutral-400",
+    footer: "border-luxury-gold/15 text-white/35",
   },
 };
 
