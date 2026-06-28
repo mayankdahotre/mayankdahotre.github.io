@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 
   --color-gta-dark: #0d0618;
   --color-gta-purple: #2d0a4e;
@@ -25,9 +24,17 @@
   scroll-behavior: smooth;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-style: inherit;
+}
+
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 400;
   background-color: var(--color-gta-dark);
@@ -37,12 +44,13 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 700;
 }
 
 .font-emphasis {
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 600;
 }
