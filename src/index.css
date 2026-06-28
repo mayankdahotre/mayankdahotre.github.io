@@ -10,14 +10,16 @@
   --color-gta-orange: #ff6030;
   --color-gta-yellow: #ffb800;
 
-  --color-luxury-dark: #050505;
-  --color-luxury-charcoal: #121010;
-  --color-luxury-ink: #1a1610;
-  --color-luxury-gold: #c9a227;
-  --color-luxury-gold-light: #e8c872;
-  --color-luxury-gold-dark: #7a5c18;
-  --color-luxury-gold-muted: #b8932a;
-  --color-luxury-bronze: #5c4a12;
+  --color-luxury-dark: #000000;
+  --color-luxury-charcoal: #0a0a0a;
+  --color-luxury-ink: #111111;
+  --color-luxury-muted: #a0a0a0;
+  --color-luxury-gold: #d4af37;
+  --color-luxury-gold-light: #e6c66a;
+  --color-luxury-gold-dark: #8b732e;
+  --color-luxury-gold-muted: #c5b358;
+  --color-luxury-bronze: #b87333;
+  --color-luxury-copper: #c08081;
 }
 
 * {
@@ -112,42 +114,35 @@ body {
 }
 
 .luxury-gradient {
-  background: linear-gradient(to right, #7a5c18, #c9a227, #e8c872);
+  background: linear-gradient(to right, #8b732e, #d4af37, #e6c66a);
 }
 
 .luxury-gradient-text {
-  background: linear-gradient(to right, #b8932a, #e8c872);
+  background: linear-gradient(to right, #8b732e, #d4af37, #e6c66a);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .luxury-bg {
-  background-color: #050505;
-  background-image: linear-gradient(to bottom, #050505, #0a0806);
+  background-color: #000000;
 }
 
 .luxury-section-glow {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(92, 74, 18, 0.04),
-    transparent
-  );
+  background: transparent;
 }
 
 .luxury-card-bg {
-  background: linear-gradient(to bottom, #121010, #0a0806);
+  background-color: #0a0a0a;
 }
 
 .luxury-glow {
   box-shadow:
-    0 0 24px rgba(184, 147, 42, 0.2),
-    0 0 48px rgba(201, 162, 39, 0.1),
-    0 8px 32px rgba(0, 0, 0, 0.45);
+    0 0 20px rgba(212, 175, 55, 0.15),
+    0 8px 28px rgba(0, 0, 0, 0.5);
 }
 
 body[data-theme="luxury"] {
-  background-color: #050505;
-  color: #f5f5f5;
+  background-color: #000000;
+  color: #ffffff;
 }
