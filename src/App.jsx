@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Research from "./components/Research";
@@ -51,6 +52,14 @@ function Portfolio() {
 
   return (
     <div className={`min-h-screen ${theme.pageBg}`}>
+      <Navbar
+        variant={themeId}
+        scrollToSection={scrollToSection}
+        sectionRefs={sectionRefs}
+        visible={themeId === "luxury" || gtaAnimationDone}
+        animated={themeId === "gta" && gtaAnimationDone}
+      />
+
       <HeroSection
         key={themeId}
         onAnimationEnd={() => setGtaAnimationDone(true)}

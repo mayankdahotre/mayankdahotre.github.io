@@ -1,15 +1,8 @@
 import heroGold from "../assets/hero-gold.jpg";
-import Navbar from "./Navbar";
 
-export default function HeroSectionLuxury({ scrollToSection, sectionRefs }) {
+export default function HeroSectionLuxury() {
   return (
-    <section className="relative flex min-h-screen flex-col luxury-bg">
-      <Navbar
-        variant="luxury"
-        scrollToSection={scrollToSection}
-        sectionRefs={sectionRefs}
-      />
-
+    <section className="relative flex min-h-screen flex-col luxury-bg pt-14">
       <div className="flex flex-1 items-center justify-center px-6 pb-16 sm:px-12">
         <div className="relative h-60 w-[min(100%,20rem)] overflow-hidden rounded-sm luxury-glow sm:h-96 sm:w-[min(55vw,32rem)]">
           <img
@@ -25,7 +18,7 @@ export default function HeroSectionLuxury({ scrollToSection, sectionRefs }) {
             <p className="mb-1 text-sm text-white sm:text-base">
               Hello! I&apos;m
             </p>
-            <h1 className="font-display text-4xl tracking-wide text-luxury-gold drop-shadow-md sm:text-5xl md:text-6xl">
+            <h1 className="font-display text-4xl tracking-wide text-white drop-shadow-md sm:text-5xl md:text-6xl">
               Mayank :)
             </h1>
           </div>

@@ -1,21 +1,16 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import { useTheme } from "../context/ThemeContext";
+import { useEffect } from "react";
 
-export default function HeroSectionGta({ onAnimationEnd, scrollToSection, sectionRefs }) {
-  const [showNav, setShowNav] = useState(false);
-
+export default function HeroSectionGta({ onAnimationEnd }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setShowNav(true);
       onAnimationEnd?.();
     }, 2500);
     return () => clearTimeout(timeout);
   }, [onAnimationEnd]);
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-14">
       <div className="absolute inset-0 gta-gradient-animated opacity-90" />
       <div className="absolute inset-0 bg-black/40" />
 
@@ -48,15 +43,6 @@ export default function HeroSectionGta({ onAnimationEnd, scrollToSection, sectio
           Mayank :)
         </h1>
       </motion.div>
-
-      {showNav && (
-        <Navbar
-          variant="gta"
-          scrollToSection={scrollToSection}
-          sectionRefs={sectionRefs}
-          animated
-        />
-      )}
     </section>
   );
 }

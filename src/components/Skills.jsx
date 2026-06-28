@@ -23,6 +23,7 @@ export default function Skills({ skillsRef }) {
         </motion.h2>
 
         <motion.div
+          id="tech-stack"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
