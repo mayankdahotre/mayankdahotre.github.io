@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import heroGold from "../assets/hero-gold.png";
+import heroGold from "../assets/hero-gold.jpg";
 import { RESUME_PATH } from "../config/site";
 import { useTheme } from "../context/ThemeContext";
 
@@ -60,6 +60,9 @@ export default function HeroSectionLuxury({
             src={heroGold}
             alt="Mayank Dahotre"
             className="h-full w-full object-cover object-[center_35%]"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
