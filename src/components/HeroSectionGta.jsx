@@ -1,16 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { RESUME_PATH } from "../config/site";
+import Navbar from "./Navbar";
 import { useTheme } from "../context/ThemeContext";
 
-export default function HeroSectionGta({
-  onAnimationEnd,
-  scrollToSection,
-  aboutRef,
-  projectsRef,
-  contactRef,
-}) {
-  const { theme } = useTheme();
+export default function HeroSectionGta({ onAnimationEnd, scrollToSection, sectionRefs }) {
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -20,13 +13,6 @@ export default function HeroSectionGta({
     }, 2500);
     return () => clearTimeout(timeout);
   }, [onAnimationEnd]);
-
-  const navLinks = [
-    { label: "About", ref: aboutRef },
-    { label: "Projects", ref: projectsRef },
-    { label: "Resume", href: RESUME_PATH, download: true },
-    { label: "Contact", ref: contactRef },
-  ];
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -64,39 +50,12 @@ export default function HeroSectionGta({
       </motion.div>
 
       {showNav && (
-        <motion.nav
-          className="absolute top-0 left-0 z-30 flex w-full items-center justify-between px-6 py-5 sm:px-10"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <span className="font-[family-name:var(--font-display)] text-2xl tracking-wider text-white">
-            Mayank Dahotre
-          </span>
-          <ul className="flex gap-4 text-sm font-medium sm:gap-8 sm:text-base">
-            {navLinks.map(({ label, ref, href, download }) => (
-              <li key={label}>
-                {href ? (
-                  <a
-                    href={href}
-                    download={download ? "Mayank_Dahotre_Resume.pdf" : undefined}
-                    className={`text-white/90 transition-colors ${theme.accentHover}`}
-                  >
-                    {label}
-                  </a>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => scrollToSection(ref)}
-                    className={`cursor-pointer text-white/90 transition-colors ${theme.accentHover}`}
-                  >
-                    {label}
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
-        </motion.nav>
+        <Navbar
+          variant="gta"
+          scrollToSection={scrollToSection}
+          sectionRefs={sectionRefs}
+          animated
+        />
       )}
     </section>
   );

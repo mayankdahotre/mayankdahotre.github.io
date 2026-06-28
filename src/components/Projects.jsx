@@ -1,29 +1,6 @@
 import { motion } from "framer-motion";
+import { projects } from "../config/portfolioData";
 import { useTheme } from "../context/ThemeContext";
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    description:
-      "A responsive personal portfolio with smooth animations, dual themes, and a luxury gold marble hero.",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "#",
-  },
-  {
-    title: "Task Manager App",
-    description:
-      "Full-stack task management app with drag-and-drop boards, real-time updates, and user auth.",
-    tags: ["React", "Node.js", "MongoDB"],
-    link: "#",
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "Clean weather dashboard pulling live data from OpenWeather API with location search and forecasts.",
-    tags: ["JavaScript", "API", "CSS"],
-    link: "#",
-  },
-];
 
 export default function Projects({ projectsRef }) {
   const { theme } = useTheme();
@@ -31,7 +8,7 @@ export default function Projects({ projectsRef }) {
   return (
     <section
       ref={projectsRef}
-      className="relative px-6 py-24 sm:px-10 lg:px-20"
+      className="relative px-6 py-20 sm:px-10 lg:px-20"
       id="projects"
     >
       <div className={`absolute inset-0 ${theme.sectionOverlay}`} />
@@ -68,7 +45,12 @@ export default function Projects({ projectsRef }) {
                   </span>
                 ))}
               </div>
-              <a href={project.link} className={`inline-block text-sm font-medium ${theme.projectLink}`}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-block text-sm font-medium ${theme.projectLink}`}
+              >
                 View Project →
               </a>
             </motion.article>
