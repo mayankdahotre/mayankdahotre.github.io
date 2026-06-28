@@ -13,7 +13,7 @@ export default function Experience({ experienceRef }) {
     >
       <div className="mx-auto max-w-4xl">
         <motion.h2
-          className={`mb-10 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
+          className={`mb-10 font-display text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function Experience({ experienceRef }) {
                 <h3 className={`text-xl ${theme.projectTitle}`}>{item.role}</h3>
                 <span className={`text-sm ${theme.muted}`}>{item.period}</span>
               </div>
-              <p className={`mb-2 text-sm font-medium ${theme.accent}`}>
+              <p className={`mb-2 text-sm font-emphasis ${theme.accent}`}>
                 {item.company}
               </p>
               <p className={`text-sm leading-relaxed ${theme.muted}`}>

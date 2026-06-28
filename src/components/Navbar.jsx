@@ -21,8 +21,8 @@ export default function Navbar({
 
   const nameClass =
     variant === "gta"
-      ? "shrink-0 font-[family-name:var(--font-display)] text-xl tracking-wider text-white sm:text-2xl"
-      : "shrink-0 text-sm font-normal tracking-wide text-luxury-gold sm:text-base";
+      ? "shrink-0 font-display text-xl tracking-wider text-white sm:text-2xl"
+      : "shrink-0 font-display text-sm tracking-wide text-luxury-gold sm:text-base";
 
   const linkClass =
     variant === "gta"
@@ -43,7 +43,7 @@ export default function Navbar({
             <button
               type="button"
               onClick={() => scrollToSection(sectionRefs[key])}
-              className={`cursor-pointer text-xs font-medium sm:text-sm ${linkClass}`}
+              className={`cursor-pointer text-xs font-emphasis sm:text-sm ${linkClass}`}
             >
               {label}
             </button>

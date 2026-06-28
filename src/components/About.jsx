@@ -12,7 +12,7 @@ export default function About({ aboutRef }) {
     >
       <div className="mx-auto max-w-4xl">
         <motion.h2
-          className={`mb-8 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
+          className={`mb-8 font-display text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

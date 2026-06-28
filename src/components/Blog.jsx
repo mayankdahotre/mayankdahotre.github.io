@@ -13,7 +13,7 @@ export default function Blog({ blogRef }) {
     >
       <div className="mx-auto max-w-4xl">
         <motion.h2
-          className={`mb-10 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
+          className={`mb-10 font-display text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -39,7 +39,7 @@ export default function Blog({ blogRef }) {
               <p className={`mb-3 text-sm leading-relaxed ${theme.muted}`}>
                 {post.excerpt}
               </p>
-              <a href={post.link} className={`text-sm font-medium ${theme.projectLink}`}>
+              <a href={post.link} className={`text-sm font-emphasis ${theme.projectLink}`}>
                 Read more →
               </a>
             </motion.article>

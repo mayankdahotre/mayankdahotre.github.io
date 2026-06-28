@@ -15,7 +15,7 @@ export default function Projects({ projectsRef }) {
 
       <div className="relative mx-auto max-w-5xl">
         <motion.h2
-          className={`mb-12 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
+          className={`mb-12 font-display text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,7 +49,7 @@ export default function Projects({ projectsRef }) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-block text-sm font-medium ${theme.projectLink}`}
+                className={`inline-block text-sm font-emphasis ${theme.projectLink}`}
               >
                 View Project →
               </a>

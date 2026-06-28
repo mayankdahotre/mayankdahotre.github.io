@@ -29,7 +29,7 @@ export default function HeroSectionGta({ onAnimationEnd, scrollToSection, sectio
         }}
       >
         <div className="gta-gradient flex h-full w-full items-center justify-center rounded-sm border border-white/20">
-          <span className="font-[family-name:var(--font-display)] text-7xl tracking-wider text-white sm:text-9xl">
+          <span className="font-display text-7xl tracking-wider text-white sm:text-9xl">
             MD
           </span>
         </div>
@@ -41,10 +41,10 @@ export default function HeroSectionGta({ onAnimationEnd, scrollToSection, sectio
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2, duration: 1, ease: "easeOut" }}
       >
-        <p className="mb-2 text-lg font-light tracking-widest text-white/80 sm:text-xl">
+        <p className="mb-2 text-lg tracking-widest text-white/80 sm:text-xl">
           Hello! I&apos;m
         </p>
-        <h1 className="font-[family-name:var(--font-display)] text-5xl tracking-wider text-white drop-shadow-lg sm:text-7xl">
+        <h1 className="font-display text-5xl tracking-wider text-white drop-shadow-lg sm:text-7xl">
           Mayank :)
         </h1>
       </motion.div>

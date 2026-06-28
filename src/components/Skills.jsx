@@ -13,7 +13,7 @@ export default function Skills({ skillsRef }) {
     >
       <div className="mx-auto max-w-4xl">
         <motion.h2
-          className={`mb-8 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
+          className={`mb-8 font-display text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -29,7 +29,7 @@ export default function Skills({ skillsRef }) {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <h3
-            className={`mb-4 font-[family-name:var(--font-display)] text-2xl tracking-wider ${theme.subheading}`}
+            className={`mb-4 font-display text-2xl tracking-wider ${theme.subheading}`}
           >
             Tech Stack
           </h3>

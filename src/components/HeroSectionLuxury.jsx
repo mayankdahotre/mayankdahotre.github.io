@@ -22,10 +22,10 @@ export default function HeroSectionLuxury({ scrollToSection, sectionRefs }) {
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-            <p className="mb-1 text-sm font-light text-white sm:text-base">
+            <p className="mb-1 text-sm text-white sm:text-base">
               Hello! I&apos;m
             </p>
-            <h1 className="font-[family-name:var(--font-display)] text-4xl tracking-wide text-luxury-gold-light drop-shadow-md sm:text-5xl md:text-6xl">
+            <h1 className="font-display text-4xl tracking-wide text-luxury-gold-light drop-shadow-md sm:text-5xl md:text-6xl">
               Mayank :)
             </h1>
           </div>
