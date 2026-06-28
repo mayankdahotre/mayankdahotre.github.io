@@ -13,9 +13,11 @@
 
   --color-luxury-dark: #0a0a0a;
   --color-luxury-charcoal: #141414;
+  --color-luxury-ink: #1a1a1a;
   --color-luxury-gold: #c9a227;
   --color-luxury-gold-light: #e8c872;
   --color-luxury-gold-dark: #8a6d1a;
+  --color-luxury-gold-muted: #b8956a;
 }
 
 * {
@@ -117,5 +119,6 @@ body {
 }
 
 body[data-theme="luxury"] {
-  background-color: var(--color-luxury-dark);
+  background-color: #ffffff;
+  color: #1a1a1a;
 }
