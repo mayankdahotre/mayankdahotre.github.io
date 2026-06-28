@@ -1,29 +1,14 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { THEME_STORAGE_KEY, themes } from "../config/themes";
+import { createContext, useContext, useEffect, useMemo } from "react";
+import { theme } from "../config/themes";
 
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [themeId, setThemeId] = useState(() => {
-    const saved = localStorage.getItem(THEME_STORAGE_KEY);
-    return saved === "luxury" ? "luxury" : "gta";
-  });
-
   useEffect(() => {
-    localStorage.setItem(THEME_STORAGE_KEY, themeId);
-    document.body.dataset.theme = themeId;
-  }, [themeId]);
+    document.body.dataset.theme = "luxury";
+  }, []);
 
-  const value = useMemo(
-    () => ({
-      theme: themes[themeId],
-      themeId,
-      setThemeId,
-      toggleTheme: () =>
-        setThemeId((current) => (current === "gta" ? "luxury" : "gta")),
-    }),
-    [themeId],
-  );
+  const value = useMemo(() => ({ theme }), []);
 
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

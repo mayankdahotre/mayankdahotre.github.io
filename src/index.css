@@ -3,13 +3,6 @@
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
 
-  --color-gta-dark: #0d0618;
-  --color-gta-purple: #2d0a4e;
-  --color-gta-magenta: #8b008b;
-  --color-gta-pink: #e04080;
-  --color-gta-orange: #ff6030;
-  --color-gta-yellow: #ffb800;
-
   --color-luxury-dark: #000000;
   --color-luxury-charcoal: #0a0a0a;
   --color-luxury-ink: #111111;
@@ -39,8 +32,8 @@ body {
   font-family: var(--font-sans);
   font-style: italic;
   font-weight: 400;
-  background-color: var(--color-gta-dark);
-  color: #f5f5f5;
+  background-color: #000000;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,73 +48,6 @@ body {
   font-family: var(--font-sans);
   font-style: italic;
   font-weight: 600;
-}
-
-.gta-gradient {
-  background: linear-gradient(
-    135deg,
-    #1a0a2e 0%,
-    #4a0080 25%,
-    #c04080 50%,
-    #ff6030 75%,
-    #ffb800 100%
-  );
-}
-
-.gta-gradient-text {
-  background: linear-gradient(
-    90deg,
-    #9932cc 0%,
-    #e04080 35%,
-    #ff6030 65%,
-    #ffb800 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gta-gradient-animated {
-  background: linear-gradient(
-    -45deg,
-    #1a0a2e,
-    #4a0080,
-    #c04080,
-    #ff6030,
-    #ffb800,
-    #4a0080
-  );
-  background-size: 400% 400%;
-  animation: gta-shift 12s ease infinite;
-}
-
-@keyframes gta-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gta-glow {
-  box-shadow:
-    0 0 30px rgba(192, 64, 128, 0.35),
-    0 0 60px rgba(255, 96, 48, 0.2);
-}
-
-.luxury-gradient {
-  background: linear-gradient(to right, #8b732e, #d4af37, #e6c66a);
-}
-
-.luxury-gradient-text {
-  background: linear-gradient(to right, #8b732e, #d4af37, #e6c66a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .luxury-bg {

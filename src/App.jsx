@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -10,12 +10,10 @@ import ResumeSection from "./components/ResumeSection";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 
 function Portfolio() {
-  const { theme, themeId } = useTheme();
-  const [gtaAnimationDone, setGtaAnimationDone] = useState(false);
+  const { theme } = useTheme();
 
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -40,48 +38,25 @@ function Portfolio() {
     [],
   );
 
-  useEffect(() => {
-    setGtaAnimationDone(false);
-  }, [themeId]);
-
-  const showSections = themeId === "luxury" || gtaAnimationDone;
-
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className={`min-h-screen ${theme.pageBg}`}>
-      <Navbar
-        variant={themeId}
-        scrollToSection={scrollToSection}
-        sectionRefs={sectionRefs}
-        visible={themeId === "luxury" || gtaAnimationDone}
-        animated={themeId === "gta" && gtaAnimationDone}
-      />
+      <Navbar scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
 
-      <HeroSection
-        key={themeId}
-        onAnimationEnd={() => setGtaAnimationDone(true)}
-        scrollToSection={scrollToSection}
-        sectionRefs={sectionRefs}
-      />
+      <HeroSection />
 
-      {showSections && (
-        <>
-          <About aboutRef={aboutRef} />
-          <Skills skillsRef={skillsRef} />
-          <Research researchRef={researchRef} />
-          <Experience experienceRef={experienceRef} />
-          <Blog blogRef={blogRef} />
-          <ResumeSection resumeRef={resumeRef} />
-          <Projects projectsRef={projectsRef} />
-          <Contact contactRef={contactRef} />
-          <Footer />
-        </>
-      )}
-
-      <ThemeToggle />
+      <About aboutRef={aboutRef} />
+      <Skills skillsRef={skillsRef} />
+      <Research researchRef={researchRef} />
+      <Experience experienceRef={experienceRef} />
+      <Blog blogRef={blogRef} />
+      <ResumeSection resumeRef={resumeRef} />
+      <Projects projectsRef={projectsRef} />
+      <Contact contactRef={contactRef} />
+      <Footer />
     </div>
   );
 }
