@@ -8,14 +8,16 @@ import { ThemeProvider, useTheme } from "./context/ThemeContext";
 
 function Portfolio() {
   const { theme, themeId } = useTheme();
-  const [showSections, setShowSections] = useState(false);
+  const [gtaAnimationDone, setGtaAnimationDone] = useState(false);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
-    setShowSections(false);
+    setGtaAnimationDone(false);
   }, [themeId]);
+
+  const showSections = themeId === "luxury" || gtaAnimationDone;
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +27,7 @@ function Portfolio() {
     <div className={`min-h-screen ${theme.pageBg}`}>
       <HeroSection
         key={themeId}
-        onAnimationEnd={() => setShowSections(true)}
+        onAnimationEnd={() => setGtaAnimationDone(true)}
         scrollToSection={scrollToSection}
         aboutRef={aboutRef}
         projectsRef={projectsRef}

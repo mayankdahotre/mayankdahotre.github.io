@@ -1,20 +1,14 @@
-import { useEffect } from "react";
 import heroGold from "../assets/hero-gold.jpg";
 import { RESUME_PATH } from "../config/site";
 import { useTheme } from "../context/ThemeContext";
 
 export default function HeroSectionLuxury({
-  onAnimationEnd,
   scrollToSection,
   aboutRef,
   projectsRef,
   contactRef,
 }) {
   const { theme } = useTheme();
-
-  useEffect(() => {
-    onAnimationEnd?.();
-  }, [onAnimationEnd]);
 
   const navLinks = [
     { label: "About", ref: aboutRef },
