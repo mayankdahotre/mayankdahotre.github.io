@@ -55,21 +55,22 @@ export default function HeroSectionLuxury({
       </nav>
 
       <div className="flex flex-1 items-center justify-center px-6 pb-16 sm:px-12">
-        <div className="relative w-full max-w-4xl overflow-hidden rounded-sm luxury-glow shadow-[0_8px_40px_rgba(201,162,39,0.15)] aspect-[4/3]">
+        {/* 4:3 landscape — ~55vw wide on desktop, matching reference proportions */}
+        <div className="relative h-60 w-[min(100%,20rem)] overflow-hidden rounded-sm shadow-[0_6px_28px_rgba(0,0,0,0.35)] sm:h-96 sm:w-[min(55vw,32rem)]">
           <img
             src={heroGold}
             alt="Mayank Dahotre"
-            className="h-full w-full object-cover object-[center_35%]"
+            className="h-full w-full object-cover object-[center_38%]"
             loading="eager"
             fetchPriority="high"
             decoding="async"
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-            <p className="mb-1 text-base font-light text-white sm:text-lg">
+            <p className="mb-1 text-sm font-light text-white sm:text-base">
               Hello! I&apos;m
             </p>
-            <h1 className="font-[family-name:var(--font-display)] text-5xl tracking-wide text-luxury-gold-light drop-shadow-md sm:text-6xl md:text-7xl">
+            <h1 className="font-[family-name:var(--font-display)] text-4xl tracking-wide text-luxury-gold-light drop-shadow-md sm:text-5xl md:text-6xl">
               Mayank :)
             </h1>
           </div>
