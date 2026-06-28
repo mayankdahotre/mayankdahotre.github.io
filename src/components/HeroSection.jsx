@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { RESUME_PATH } from "../config/site";
 
 export default function HeroSection({
   onAnimationEnd,
@@ -21,6 +22,7 @@ export default function HeroSection({
   const navLinks = [
     { label: "About", ref: aboutRef },
     { label: "Projects", ref: projectsRef },
+    { label: "Resume", href: RESUME_PATH, download: true },
     { label: "Contact", ref: contactRef },
   ];
 
@@ -67,15 +69,25 @@ export default function HeroSection({
             Mayank Dahotre
           </span>
           <ul className="flex gap-4 text-sm font-medium sm:gap-8 sm:text-base">
-            {navLinks.map(({ label, ref }) => (
+            {navLinks.map(({ label, ref, href, download }) => (
               <li key={label}>
-                <button
-                  type="button"
-                  onClick={() => scrollToSection(ref)}
-                  className="cursor-pointer text-white/90 transition-colors hover:text-gta-yellow"
-                >
-                  {label}
-                </button>
+                {href ? (
+                  <a
+                    href={href}
+                    download={download ? "Mayank_Dahotre_Resume.pdf" : undefined}
+                    className="text-white/90 transition-colors hover:text-gta-yellow"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection(ref)}
+                    className="cursor-pointer text-white/90 transition-colors hover:text-gta-yellow"
+                  >
+                    {label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
