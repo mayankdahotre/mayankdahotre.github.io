@@ -112,27 +112,11 @@ body {
 }
 
 .luxury-gradient {
-  background: linear-gradient(
-    135deg,
-    #0a0806 0%,
-    #1a1408 18%,
-    #5c4a12 42%,
-    #b8932a 58%,
-    #dbb445 72%,
-    #e8c872 85%,
-    #c9a227 100%
-  );
+  background: linear-gradient(to right, #7a5c18, #c9a227, #e8c872);
 }
 
 .luxury-gradient-text {
-  background: linear-gradient(
-    120deg,
-    #7a5c18 0%,
-    #b8932a 25%,
-    #dbb445 50%,
-    #f0d78c 75%,
-    #c9a227 100%
-  );
+  background: linear-gradient(to right, #b8932a, #e8c872);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -140,28 +124,20 @@ body {
 
 .luxury-bg {
   background-color: #050505;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(184, 147, 42, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 80% 70%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
-    linear-gradient(165deg, #050505 0%, #0a0806 35%, #121010 65%, #0a0806 100%);
+  background-image: linear-gradient(to bottom, #050505, #0a0806);
 }
 
 .luxury-section-glow {
   background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(92, 74, 18, 0.04) 50%,
-    transparent 100%
+    to bottom,
+    transparent,
+    rgba(92, 74, 18, 0.04),
+    transparent
   );
 }
 
 .luxury-card-bg {
-  background: linear-gradient(
-    145deg,
-    rgba(18, 16, 16, 0.95) 0%,
-    rgba(26, 20, 8, 0.85) 50%,
-    rgba(18, 16, 16, 0.95) 100%
-  );
+  background: linear-gradient(to bottom, #121010, #0a0806);
 }
 
 .luxury-glow {
