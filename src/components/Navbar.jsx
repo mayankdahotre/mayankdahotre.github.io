@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { key: "blog", label: "Blog" },
   { key: "resume", label: "Resume" },
   { key: "projects", label: "Projects" },
+  { key: "contact", label: "Contact" },
 ];
 
 export default function Navbar({

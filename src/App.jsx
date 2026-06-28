@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Blog from "./components/Blog";
 import ResumeSection from "./components/ResumeSection";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ThemeToggle from "./components/ThemeToggle";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
@@ -22,6 +23,7 @@ function Portfolio() {
   const blogRef = useRef(null);
   const resumeRef = useRef(null);
   const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const sectionRefs = useMemo(
     () => ({
@@ -32,6 +34,7 @@ function Portfolio() {
       blog: blogRef,
       resume: resumeRef,
       projects: projectsRef,
+      contact: contactRef,
     }),
     [],
   );
@@ -64,6 +67,7 @@ function Portfolio() {
           <Blog blogRef={blogRef} />
           <ResumeSection resumeRef={resumeRef} />
           <Projects projectsRef={projectsRef} />
+          <Contact contactRef={contactRef} />
           <Footer />
         </>
       )}
