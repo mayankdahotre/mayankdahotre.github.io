@@ -23,12 +23,12 @@ export default function Navbar({
   const nameClass =
     variant === "gta"
       ? "shrink-0 font-display text-xl tracking-wider text-white sm:text-2xl"
-      : "shrink-0 font-display text-sm tracking-wide text-luxury-gold sm:text-base";
+      : "shrink-0 font-display text-sm tracking-wide luxury-gradient-text sm:text-base";
 
   const linkClass =
     variant === "gta"
       ? `shrink-0 whitespace-nowrap text-white/90 transition-colors ${theme.accentHover}`
-      : `shrink-0 whitespace-nowrap text-luxury-gold-light/80 transition-colors ${theme.accentHover}`;
+      : `shrink-0 whitespace-nowrap text-luxury-gold-light/85 transition-colors ${theme.accentHover}`;
 
   const navClass =
     variant === "gta"
