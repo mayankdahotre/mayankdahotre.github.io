@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { EMAIL, GITHUB, LINKEDIN, RESUME_PATH } from "../config/site";
+import { useTheme } from "../context/ThemeContext";
 
 const socials = [
   {
@@ -42,6 +43,8 @@ const socials = [
 ];
 
 export default function Contact({ contactRef }) {
+  const { theme } = useTheme();
+
   return (
     <section
       ref={contactRef}
@@ -50,7 +53,7 @@ export default function Contact({ contactRef }) {
     >
       <div className="mx-auto max-w-4xl text-center">
         <motion.h2
-          className="mb-6 font-[family-name:var(--font-display)] text-5xl tracking-wider gta-gradient-text sm:text-6xl"
+          className={`mb-6 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -60,7 +63,7 @@ export default function Contact({ contactRef }) {
         </motion.h2>
 
         <motion.p
-          className="mb-12 text-lg text-white/70"
+          className={`mb-12 text-lg ${theme.muted}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -84,7 +87,7 @@ export default function Contact({ contactRef }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="flex h-14 w-14 items-center justify-center rounded-sm border border-white/10 bg-gta-purple/30 text-white/80 transition-all hover:border-gta-orange/50 hover:text-gta-yellow hover:gta-glow"
+              className={theme.socialBtn}
             >
               {social.icon}
             </a>
@@ -98,23 +101,20 @@ export default function Contact({ contactRef }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.45 }}
         >
-          <a
-            href={`mailto:${EMAIL}`}
-            className="gta-gradient inline-block rounded-sm px-10 py-4 font-[family-name:var(--font-display)] text-xl tracking-wider text-white transition-transform hover:scale-105"
-          >
+          <a href={`mailto:${EMAIL}`} className={theme.primaryBtn}>
             Say Hello
           </a>
           <a
             href={RESUME_PATH}
             download="Mayank_Dahotre_Resume.pdf"
-            className="inline-block rounded-sm border border-gta-orange/50 px-10 py-4 font-[family-name:var(--font-display)] text-xl tracking-wider text-gta-yellow transition-all hover:border-gta-yellow hover:bg-gta-purple/30 hover:scale-105"
+            className={theme.secondaryBtn}
           >
             Download Resume
           </a>
         </motion.div>
       </div>
 
-      <footer className="mt-20 border-t border-white/10 pt-8 text-center text-sm text-white/40">
+      <footer className={`mt-20 border-t pt-8 text-center text-sm ${theme.footer}`}>
         © {new Date().getFullYear()} Mayank Dahotre. Built with React & Tailwind.
       </footer>
     </section>

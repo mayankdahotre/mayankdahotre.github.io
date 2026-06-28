@@ -1,22 +1,30 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ThemeToggle from "./components/ThemeToggle";
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 
-export default function App() {
+function Portfolio() {
+  const { theme, themeId } = useTheme();
   const [showSections, setShowSections] = useState(false);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+
+  useEffect(() => {
+    setShowSections(false);
+  }, [themeId]);
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="min-h-screen bg-gta-dark">
+    <div className={`min-h-screen ${theme.pageBg}`}>
       <HeroSection
+        key={themeId}
         onAnimationEnd={() => setShowSections(true)}
         scrollToSection={scrollToSection}
         aboutRef={aboutRef}
@@ -31,6 +39,16 @@ export default function App() {
           <Contact contactRef={contactRef} />
         </>
       )}
+
+      <ThemeToggle />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Portfolio />
+    </ThemeProvider>
   );
 }

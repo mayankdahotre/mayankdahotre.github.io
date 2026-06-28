@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const skills = [
   "JavaScript",
@@ -12,6 +13,8 @@ const skills = [
 ];
 
 export default function About({ aboutRef }) {
+  const { theme } = useTheme();
+
   return (
     <section
       ref={aboutRef}
@@ -20,7 +23,7 @@ export default function About({ aboutRef }) {
     >
       <div className="mx-auto max-w-4xl">
         <motion.h2
-          className="mb-8 font-[family-name:var(--font-display)] text-5xl tracking-wider gta-gradient-text sm:text-6xl"
+          className={`mb-8 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -30,7 +33,7 @@ export default function About({ aboutRef }) {
         </motion.h2>
 
         <motion.p
-          className="mb-10 text-lg leading-relaxed text-white/75 sm:text-xl"
+          className={`mb-10 text-lg leading-relaxed sm:text-xl ${theme.body}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -48,15 +51,14 @@ export default function About({ aboutRef }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <h3 className="mb-4 font-[family-name:var(--font-display)] text-2xl tracking-wider text-gta-yellow">
+          <h3
+            className={`mb-4 font-[family-name:var(--font-display)] text-2xl tracking-wider ${theme.subheading}`}
+          >
             Skills
           </h3>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-sm border border-gta-pink/30 bg-gta-purple/30 px-4 py-2 text-sm text-white/90 backdrop-blur-sm transition-colors hover:border-gta-orange/50 hover:bg-gta-magenta/20"
-              >
+              <span key={skill} className={theme.skillTag}>
                 {skill}
               </span>
             ))}

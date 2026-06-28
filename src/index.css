@@ -10,6 +10,12 @@
   --color-gta-pink: #e04080;
   --color-gta-orange: #ff6030;
   --color-gta-yellow: #ffb800;
+
+  --color-luxury-dark: #0a0a0a;
+  --color-luxury-charcoal: #141414;
+  --color-luxury-gold: #c9a227;
+  --color-luxury-gold-light: #e8c872;
+  --color-luxury-gold-dark: #8a6d1a;
 }
 
 * {
@@ -79,4 +85,37 @@ body {
   box-shadow:
     0 0 30px rgba(192, 64, 128, 0.35),
     0 0 60px rgba(255, 96, 48, 0.2);
+}
+
+.luxury-gradient {
+  background: linear-gradient(
+    135deg,
+    #8a6d1a 0%,
+    #c9a227 35%,
+    #e8c872 65%,
+    #c9a227 100%
+  );
+}
+
+.luxury-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #8a6d1a 0%,
+    #c9a227 40%,
+    #e8c872 70%,
+    #c9a227 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-glow {
+  box-shadow:
+    0 0 30px rgba(201, 162, 39, 0.25),
+    0 0 60px rgba(232, 200, 114, 0.15);
+}
+
+body[data-theme="luxury"] {
+  background-color: var(--color-luxury-dark);
 }

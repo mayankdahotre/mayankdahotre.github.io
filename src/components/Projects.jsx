@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const projects = [
   {
     title: "Portfolio Website",
     description:
-      "A responsive personal portfolio with smooth animations and a bold GTA V-inspired gradient theme.",
+      "A responsive personal portfolio with smooth animations, dual themes, and a luxury gold marble hero.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     link: "#",
   },
@@ -25,17 +26,19 @@ const projects = [
 ];
 
 export default function Projects({ projectsRef }) {
+  const { theme } = useTheme();
+
   return (
     <section
       ref={projectsRef}
       className="relative px-6 py-24 sm:px-10 lg:px-20"
       id="projects"
     >
-      <div className="absolute inset-0 gta-gradient opacity-5" />
+      <div className={`absolute inset-0 ${theme.sectionOverlay}`} />
 
       <div className="relative mx-auto max-w-5xl">
         <motion.h2
-          className="mb-12 font-[family-name:var(--font-display)] text-5xl tracking-wider gta-gradient-text sm:text-6xl"
+          className={`mb-12 font-[family-name:var(--font-display)] text-5xl tracking-wider sm:text-6xl ${theme.heading}`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -48,32 +51,24 @@ export default function Projects({ projectsRef }) {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              className="group flex flex-col rounded-sm border border-white/10 bg-gta-purple/20 p-6 backdrop-blur-sm transition-all hover:border-gta-orange/40 hover:gta-glow"
+              className={theme.projectCard}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
-              <h3 className="mb-3 font-[family-name:var(--font-display)] text-2xl tracking-wide text-gta-yellow">
-                {project.title}
-              </h3>
-              <p className="mb-5 flex-1 text-sm leading-relaxed text-white/70">
+              <h3 className={`mb-3 ${theme.projectTitle}`}>{project.title}</h3>
+              <p className={`mb-5 flex-1 text-sm leading-relaxed ${theme.muted}`}>
                 {project.description}
               </p>
               <div className="mb-5 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-sm bg-gta-magenta/20 px-2 py-1 text-xs text-gta-pink"
-                  >
+                  <span key={tag} className={theme.projectTag}>
                     {tag}
                   </span>
                 ))}
               </div>
-              <a
-                href={project.link}
-                className="inline-block text-sm font-medium text-gta-orange transition-colors hover:text-gta-yellow"
-              >
+              <a href={project.link} className={`inline-block text-sm font-medium ${theme.projectLink}`}>
                 View Project →
               </a>
             </motion.article>
